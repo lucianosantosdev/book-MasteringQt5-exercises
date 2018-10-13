@@ -50,7 +50,7 @@ MainWindow::addTask()
     m_tasks.append(task);
     ui->tasksLayout->addWidget(task);
     connect(task, &Task::removed, this, &MainWindow::removeTask);
-    connect(task, &Task::statusChanged, this, &MainWindow::updateStatus);
+    connect(task, &Task::statusChanged, this, &MainWindow::taskStatusChanged);
   }
   updateStatus();
 }
@@ -67,4 +67,7 @@ MainWindow::removeTask(Task* task)
 
 void
 MainWindow::taskStatusChanged(Task* task)
-{}
+{
+  (void)task;
+  updateStatus();
+}
