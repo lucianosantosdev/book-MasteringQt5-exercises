@@ -1,9 +1,15 @@
 #include "Album.h"
+#include <QtDebug>
 
 Album::Album(const QString& name)
   : mId(-1)
   , mName(name)
 {}
+
+Album::~Album()
+{
+  qDebug() << "~Album()";
+}
 
 int
 Album::id() const

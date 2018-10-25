@@ -1,11 +1,14 @@
 #pragma once
 
 #include "Album.h"
+#include "AlbumDao.h"
 #include "DatabaseManager.h"
 #include "Picture.h"
 
+#include <QtDebug>
 #include <gmock/gmock-matchers.h>
 #include <gtest/gtest.h>
+#include <memory>
 #include <string>
 
 using namespace testing;

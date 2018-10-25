@@ -7,10 +7,9 @@
 QT       += sql
 QT       -= gui
 
-CONFIG += c++14
-
 TARGET = gallery-core
 TEMPLATE = lib
+CONFIG += lib c++14
 
 DEFINES += GALLERYCORE_LIBRARY
 
@@ -29,11 +28,17 @@ SOURCES += \
         Album.cpp \
     Picture.cpp \
     DatabaseManager.cpp \
-    AlbumDao.cpp
+    AlbumDao.cpp \
+    PictureDao.cpp \
+    AlbumModel.cpp \
+    PictureModel.cpp
 
 HEADERS += \
         Album.h \
         gallery-core_global.h \
     Picture.h \
     DatabaseManager.h \
-    AlbumDao.h
+    AlbumDao.h \
+    PictureDao.h \
+    AlbumModel.h \
+    PictureModel.h

@@ -1,9 +1,13 @@
 #pragma once
 
-#include <QVector>
+#include "Album.h"
+
+#include <memory>
+#include <vector>
 
 class QSqlDatabase;
-class Album;
+
+typedef std::vector<std::unique_ptr<Album>> AlbumVector;
 
 class AlbumDao
 {
@@ -13,7 +17,7 @@ public:
   void insert(Album& album) const;
   void update(const Album& album) const;
   void remove(int id) const;
-  QVector<Album*> list() const;
+  std::unique_ptr<AlbumVector> list() const;
 
 private:
   QSqlDatabase& mDatabase;

@@ -8,6 +8,7 @@ class GALLERYCORESHARED_EXPORT Album
 {
 public:
   explicit Album(const QString& name = "");
+  ~Album();
 
   int id() const;
   void setId(int id);
